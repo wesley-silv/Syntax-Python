@@ -1,6 +1,5 @@
-# Generate for GPT chat
 def cost_manager():
-    print('Management of cost in Python')
+    print('\n          Management of cost in Python          '.upper())
 
     money = float(input(f'\nWhat the value received monthly: '))
     print(f'Received value RS {money:.2f}')
@@ -10,7 +9,7 @@ def cost_manager():
     print(f'Rest value: R$ {money:.2f}')
     
     print(f'\nWrite the items value to create the list:')
-    # Dicionário com os itens e seus respectivos nomes
+    # Dictionary with the content of items
     costs_fixed = {
         1: 'Water',
         2: 'Eletric energy',
@@ -22,29 +21,32 @@ def cost_manager():
         8: 'Gasoline'
     }
     
-    # Pedindo os valores dos itens
-    water = float(input(f'What the of Water{costs_fixed[1]}: '))
-    eletric_energy = float(input(f'What the value of Eletric energy{costs_fixed[2]}: '))
-    internet = float(input(f'What the value of Internet{costs_fixed[3]}: '))
-    phone = float(input(f'What the value of Phone plan{costs_fixed[4]}: '))
-    graduation = float(input(f'What the value of Graduation{costs_fixed[5]}: '))
-    car = float(input(f'What the value of Car{costs_fixed[5]}: '))
-    rent = float(input(f'What the value of Rent{costs_fixed[5]}: '))
-    gasoline = float(input(f'What the value of Gasoline{costs_fixed[5]}: '))
-  
+    # Value of each item
+    water = float(input(f'What the of {costs_fixed[1]}: '))
+    eletric_energy = float(input(f'What the value of {costs_fixed[2]}: '))
+    internet = float(input(f'What the value of {costs_fixed[3]}: '))
+    phone = float(input(f'What the value of{costs_fixed[4]}: '))
+    graduation = float(input(f'What the value of {costs_fixed[5]}: '))
+    car = float(input(f'What the value of {costs_fixed[5]}: '))
+    rent = float(input(f'What the value of {costs_fixed[5]}: '))
+    gasoline = float(input(f'What the value of {costs_fixed[5]}: '))
 
-    # Calculando a soma e a média dos valores
+    # Calc the some and media of results
     total_cost = water + eletric_energy + internet + phone + graduation + car + rent + gasoline
     average_cost = total_cost / 8
     remove_values = money - total_cost
     
-    # Imprimindo os resultados
+    # Print all results 
     print(f'\nTotal costs')
     print(f'{costs_fixed[1]}: R${water:.2f}')
     print(f'{costs_fixed[2]}: R${eletric_energy:.2f}')
     print(f'{costs_fixed[3]}: R${internet:.2f}')
     print(f'{costs_fixed[4]}: R${phone:.2f}')
     print(f'{costs_fixed[5]}: R${graduation:.2f}')
+    print(f'{costs_fixed[6]}: R${car:.2f}')
+    print(f'{costs_fixed[7]}: R${rent:.2f}')
+    print(f'{costs_fixed[8]}: R${gasoline:.2f}')
+
     print(f'\nTotal costs: R${total_cost:.2f}')
     print(f'Media of costs: R${average_cost:.2f}')
     print(f'Reste value after of payment: R${remove_values:.2f}')
